@@ -1,18 +1,24 @@
 package bonstudente1_bogolostudente2_verificagit;
 
-import java.util.Arrays;
-
 public class BonStudente1_BogoloStudente2_VerificaGit {
 
     public static void main(String[] args) {
+    
+        Aereoporto aeroporto=new Aereoporto("Ronchi dei legionari",2830);
         
-        Aereoporto aereoporto= new Aereoporto();
+        String str= "L'aeroporto di "+aeroporto.getCittà()+" ha una superfice di "+aeroporto.getSuperficie()+" e gli aerei disponibili sono: \n";
         
-        System.out.println("L'aereoporto della citta "+aereoporto.getCittà()+" di superfice "+aereoporto.getSuperficie()+" ha 3 aerei con le segenti informzioni: ");
-        
-        for(int i=0;i<3;i++){
-            System.out.println("Il codice "+aereoporto.getAerei()[i].getCodice()+" numero di posti "+aereoporto.getAerei()[i].getnPosti()+" con marca "+aereoporto.getAerei()[i].getMarca()+" con modello "+aereoporto.getAerei()[i].getModello());
+        for (int i=0;i<3;i++)
+        {
+            str+="codice: "+aeroporto.getAerei()[i].getCodice()+", ";
+            str+="marca: "+aeroporto.getAerei()[i].getMarca()+", ";
+            str+="modello: "+aeroporto.getAerei()[i].getModello()+", ";
+            str+="numero posti:"+aeroporto.getAerei()[i].getnPosti()+"\n";
+
+
         }
+        
+        System.out.println(str);
     }
     
 }
