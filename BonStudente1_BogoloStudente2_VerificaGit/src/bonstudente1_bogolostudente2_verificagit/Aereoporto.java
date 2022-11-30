@@ -10,10 +10,16 @@ public class Aereoporto {
         Aereo a2=new Aereo("4Z5R3T",25,"Santonov","Gusci");
         Aereo a3=new Aereo("4D6Y9U",40,"Sokker","Tha sustene");
         
+        this.aerei = new Aereo[3];
+        
         aerei[0]=a1;
         aerei[1]=a2;
         aerei[2]=a3;
-            
+        
+        città="Ronchi";
+        
+        superficie=2830;
+        
     }
 
     public Aereoporto(String città, int superficie, Aereo[] aerei) {
