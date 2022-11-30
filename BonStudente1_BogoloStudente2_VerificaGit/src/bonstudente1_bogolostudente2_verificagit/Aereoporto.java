@@ -3,17 +3,23 @@ package bonstudente1_bogolostudente2_verificagit;
 public class Aereoporto {
     private String città;
     private int superficie;
-    private int aerei[];
-    private String piloti[];
+    private Aereo aerei[];
 
     public Aereoporto() {
+        Aereo a1=new Aereo("8M9G5U",30,"businAir","Carmani");
+        Aereo a2=new Aereo("4Z5R3T",25,"Santonov","Gusci");
+        Aereo a3=new Aereo("4D6Y9U",40,"Sokker","Tha sustene");
+        
+        aerei[0]=a1;
+        aerei[1]=a2;
+        aerei[2]=a3;
+            
     }
 
-    public Aereoporto(String città, int superficie, int[] aerei, String[] piloti) {
+    public Aereoporto(String città, int superficie, Aereo[] aerei) {
         this.città = città;
         this.superficie = superficie;
         this.aerei = aerei;
-        this.piloti = piloti;
     }
 
     public String getCittà() {
@@ -32,20 +38,8 @@ public class Aereoporto {
         this.superficie = superficie;
     }
 
-    public int[] getAerei() {
+    public Aereo[] getAerei() {
         return aerei;
-    }
-
-    public void setAerei(int[] aerei) {
-        this.aerei = aerei;
-    }
-
-    public String[] getPiloti() {
-        return piloti;
-    }
-
-    public void setPiloti(String[] piloti) {
-        this.piloti = piloti;
     }
     
 }
